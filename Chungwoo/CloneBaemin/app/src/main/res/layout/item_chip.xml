@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/chip_recent_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/mint"
+        android:text="네네치킨"
+        android:textColor="@color/light_green_main"
+        app:chipBackgroundColor="@color/light_mint"
+        app:closeIcon="@drawable/ic_close_mint"
+        app:closeIconTint="@color/light_green_main"
+        app:closeIconVisible="true" />
+</layout>

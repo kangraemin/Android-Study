@@ -23,7 +23,17 @@
         android:id="@+id/searchFragment"
         android:name="com.lcw.study.clonebaemin.feature.search.SearchFragment"
         android:label="SearchFragment"
-        tools:layout="@layout/fragment_search" />
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/action_searchFragment_to_searchListFragment"
+            app:destination="@id/searchListFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/searchListFragment"
+        android:name="com.lcw.study.clonebaemin.feature.search.SearchListFragment"
+        android:label="SearchListFragment"
+        tools:layout="@layout/fragment_search_list" />
     <fragment
         android:id="@+id/favoriteFragment"
         android:name="com.lcw.study.clonebaemin.feature.favorite.FavoriteFragment"

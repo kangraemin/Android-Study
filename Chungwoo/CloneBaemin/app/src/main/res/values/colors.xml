@@ -16,5 +16,8 @@
     <color name="bg_profile">#92AAC4</color>
     <color name="light_green_main">#25B9B4</color>
     <color name="light_gray">#CCCCCC</color>
+    <color name="mint">#9BC8C4</color>
+    <color name="light_mint">#D3EFED</color>
+    <color name="light_grayy">#F4F4F4</color>
 
 </resources>
