@@ -1,23 +1,29 @@
-package android.anjahyun.study.network
+package android.anjahyun.study.di
 
+import android.anjahyun.study.BuildConfig
+import android.anjahyun.study.network.ApiService
+import dagger.Module
+import dagger.Provides
+import dagger.hilt.InstallIn
+import dagger.hilt.components.SingletonComponent
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
-import okhttp3.Response
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
-import retrofit2.converter.scalars.ScalarsConverterFactory
-import java.io.IOException
 import java.util.concurrent.TimeUnit
+import javax.inject.Singleton
 
-object ApiClient {
+@InstallIn(SingletonComponent::class)
+@Module
+class NetworkModule {
 
-    val BASE_URL = "https://r5670326j8.execute-api.ap-northeast-2.amazonaws.com/"
+    val BASE_URL = "https://r5670326j8.execute-api.ap-northeast-2.amazonaws.com/delivery_server/"
 
-    private lateinit var apiService: ApiService
-
-    private fun provideOkHttp(): OkHttpClient {
+    @Singleton
+    @Provides
+    fun provideOkHttp(): OkHttpClient {
         val httpClient = OkHttpClient.Builder()
         httpClient.addInterceptor(Interceptor { chain ->
             val original = chain.request()
@@ -25,6 +31,7 @@ object ApiClient {
             val url = originalHttpUrl.newBuilder().build()
             val requestBuilder = original.newBuilder()
                 .url(url)
+                .addHeader("X-Api-Key", "${BuildConfig.WEB_API_KEY}")
             val request = requestBuilder.build()
             chain.proceed(request)
         })
@@ -37,20 +44,20 @@ object ApiClient {
         return httpClient.build()
     }
 
-    fun initServices() {
-        val retrofit = Retrofit.Builder()
+    @Singleton
+    @Provides
+    fun provideRetrofit(): Retrofit.Builder {
+        return Retrofit.Builder()
             .baseUrl(BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
-            .addConverterFactory(ScalarsConverterFactory.create())
             .client(provideOkHttp())
             .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
-            .build()
-        apiService = retrofit.create(ApiService::class.java)
     }
 
-    fun instance(): ApiService {
-        return apiService
+    @Singleton
+    @Provides
+    fun provideApiService(retrofit: Retrofit.Builder): ApiService {
+        return retrofit.build().create(ApiService::class.java)
     }
-
 
 }

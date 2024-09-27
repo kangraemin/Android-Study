@@ -1,3 +1,76 @@
 <resources>
     <string name="app_name">study</string>
+
+
+    <!-- 공통 -->
+    <string name="search">검색</string>
+    <string name="fav">찜</string>
+    <string name="orderList">주문내역</string>
+    <string name="my">My배민</string>
+    <string name="nothing">미개발 부분입니다.</string>
+
+    <!-- 검색 -->
+    <string name="search1">최근 검색어</string>
+    <string name="search2">전체삭제</string>
+    <string name="search3">가장 많이\n검색하고 있어요</string>
+    <string name="search4">기준</string>
+    <string name="search5">검색어를 입력해주세요</string>
+
+    <!-- 찜 -->
+    <string name="fav1">배달/포장</string>
+    <string name="fav2">B마트</string>
+    <string name="fav3">쇼핑라이브</string>
+    <string name="fav4">자주 찾는 가게를\n찜 해보세요.</string>
+    <string name="fav5">B마트가 아직 갈 수 없는 지역이에요.</string>
+    <string name="fav6">알림받기를 설정한 채널이 없습니다.</string>
+    <string name="fav7">총</string>
+    <string name="fav8">개</string>
+    <!-- 메인 -->
+    <string name="main1">배달</string>
+    <string name="main2">배민1</string>
+    <string name="main3">포장</string>
+    <string name="main4">쇼핑라이브</string>
+    <string name="main5">선물하기</string>
+    <string name="main6">전국별미</string>
+    <!-- 주문내역 -->
+    <string name="orderList1">배달/포장</string>
+    <string name="orderList2">B마트</string>
+    <string name="orderList3">쇼핑라이브</string>
+    <string name="orderList4">전국별미</string>
+    <!-- my배민 -->
+    <string name="my1">등급별 혜택</string>
+    <string name="my2">포인트</string>
+    <string name="my3">쿠폰함</string>
+    <string name="my4">선물함</string>
+    <string name="my5">찜</string>
+    <string name="my6">주문내역</string>
+    <string name="my7">리뷰관리</string>
+    <string name="my8">함께해요!</string>
+    <string name="my9">배민페이 관리</string>
+    <string name="my10">배민페이로 결제하면 최대 5.5% 배민포인트가 적립됩니다!</string>
+    <string name="my11">가족계정 관리</string>
+    <string name="my12">결제수단을 공유해 우리 가족의 끼니를 챙겨주세요.</string>
+    <string name="my13">공지사항</string>
+    <string name="my14">배민커넥트 지원</string>
+    <string name="my15">이벤트</string>
+    <string name="my16">고객센터</string>
+    <string name="my17">환경설정</string>
+    <string name="my18">약관 및 정책</string>
+    <string name="my19">현재 버전</string>
+    <string name="my20">로그인해주세요</string>
+    <string name="my21">Copyright JaeHyun Brothers in Seoul, All Rights Reserved.</string>
+    <!-- 로그인 -->
+    <string name="login">로그인</string>
+    <string name="login1">아이디 또는 이메일</string>
+    <string name="login2">비밀번호</string>
+    <string name="login3">아이디 찾기</string>
+    <string name="login4">비밀번호 찾기</string>
+    <string name="login5">페이스북으로 로그인</string>
+    <string name="login6">네이버로 로그인</string>
+    <string name="login7">Apple로 로그인</string>
+    <string name="login8">혹시, 배달의민족이 처음이신가요?</string>
+    <string name="login9">회원가입</string>
+    <string name="login10">로그인 완료</string>
+    <string name="login11">아이디 또는 비밀번호가 일치하지 않습니다.</string>
+
 </resources>

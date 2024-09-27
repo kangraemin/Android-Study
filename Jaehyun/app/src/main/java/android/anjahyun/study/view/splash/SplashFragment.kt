@@ -1,4 +1,4 @@
-package android.anjahyun.study.view
+package android.anjahyun.study.view.splash
 
 import android.anjahyun.study.R
 import android.anjahyun.study.base.BaseFragment

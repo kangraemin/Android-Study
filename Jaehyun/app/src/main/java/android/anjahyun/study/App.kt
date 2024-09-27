@@ -1,13 +1,7 @@
 package android.anjahyun.study
 
-import android.anjahyun.study.network.ApiClient
 import android.app.Application
+import dagger.hilt.android.HiltAndroidApp
 
-class App: Application() {
-
-    override fun onCreate() {
-        super.onCreate()
-        ApiClient.initServices()
-    }
-
-}
+@HiltAndroidApp
+class App: Application()

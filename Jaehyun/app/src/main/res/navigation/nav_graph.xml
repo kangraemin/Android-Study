@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/splashFragment"
-        android:name="android.anjahyun.study.view.SplashFragment"
+        android:name="android.anjahyun.study.view.splash.SplashFragment"
         tools:layout="@layout/fragment_splash"
         app:popUpToInclusive="true"
         android:label="SplashFragment" >
@@ -17,27 +17,32 @@
     </fragment>
     <fragment
         android:id="@+id/favFragment"
-        android:name="android.anjahyun.study.view.FavFragment"
+        android:name="android.anjahyun.study.view.fav.FavFragment"
         tools:layout="@layout/fragment_fav"
         android:label="FavFragment" />
     <fragment
         android:id="@+id/searchFragment"
-        android:name="android.anjahyun.study.view.SearchFragment"
+        android:name="android.anjahyun.study.view.search.SearchFragment"
         tools:layout="@layout/fragment_search"
-        android:label="SearchFragment" />
+        android:label="SearchFragment" >
+        <action
+            android:id="@+id/action_searchFragment_to_searchDetailFragment"
+            app:destination="@id/searchDetailFragment" />
+
+    </fragment>
     <fragment
         android:id="@+id/mainFragment"
-        android:name="android.anjahyun.study.view.MainFragment"
+        android:name="android.anjahyun.study.view.main.MainFragment"
         tools:layout="@layout/fragment_main"
         android:label="MainFragment" />
     <fragment
         android:id="@+id/orderListFragment"
-        android:name="android.anjahyun.study.view.OrderListFragment"
+        android:name="android.anjahyun.study.view.orderlist.OrderListFragment"
         tools:layout="@layout/fragment_orderlist"
         android:label="OrderListFragment" />
     <fragment
         android:id="@+id/myFragment"
-        android:name="android.anjahyun.study.view.MyFragment"
+        android:name="android.anjahyun.study.view.my.MyFragment"
         tools:layout="@layout/fragment_my"
         android:label="MyFragment" >
         <action
@@ -46,7 +51,16 @@
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
-        android:name="android.anjahyun.study.view.LoginFragment"
+        android:name="android.anjahyun.study.view.login.LoginFragment"
         tools:layout="@layout/fragment_login"
         android:label="LoginFragment" />
+    <fragment
+        android:id="@+id/searchDetailFragment"
+        android:name="android.anjahyun.study.view.search.SearchDetailFragment"
+        android:label="SearchDetailFragment"
+        tools:layout="@layout/fragment_search_detail" >
+        <argument
+            android:name="itemName"
+            app:argType="string" />
+    </fragment>
 </navigation>

@@ -48,7 +48,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
-            android:hint="아이디 또는 이메일"
+            android:hint="@string/login1"
             app:endIconMode="clear_text"
             android:background="@null"
             app:layout_constraintEnd_toEndOf="parent"
@@ -57,6 +57,7 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_id"
+                android:background="@color/white"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -67,7 +68,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:background="@null"
-            android:hint="비밀번호"
+            android:hint="@string/login2"
             app:endIconMode="clear_text"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -75,6 +76,7 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_pw"
+                android:background="@color/white"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -84,7 +86,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="로그인"
+            android:text="@string/login"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:background="@color/main"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/layout_password" />
@@ -96,7 +101,7 @@
             android:layout_marginTop="20dp"
             android:layout_marginEnd="20dp"
             android:padding="10dp"
-            android:text="아이디 찾기"
+            android:text="@string/login3"
             app:layout_constraintEnd_toStartOf="@+id/guideline"
             app:layout_constraintTop_toBottomOf="@+id/btn_login" />
 
@@ -106,7 +111,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:padding="10dp"
-            android:text="비밀번호 찾기"
+            android:text="@string/login4"
             app:layout_constraintStart_toStartOf="@+id/guideline"
             app:layout_constraintTop_toTopOf="@+id/tv_findid" />
 
@@ -116,7 +121,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="10dp"
-            android:text="혹시, 배달의민족이 처음이신가요?"
+            android:text="@string/login8"
             app:layout_constraintBottom_toBottomOf="@+id/tv_register"
             app:layout_constraintEnd_toStartOf="@+id/tv_register"
             app:layout_constraintTop_toTopOf="@+id/tv_register" />
@@ -128,7 +133,8 @@
             android:layout_marginEnd="20dp"
             android:layout_marginBottom="10dp"
             android:padding="10dp"
-            android:text="회원가입"
+            android:text="@string/login9"
+            android:textColor="@color/main"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
 
@@ -157,7 +163,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
-                android:text="페이스북으로 로그인"
+                android:text="@string/login5"
                 app:layout_constraintBottom_toBottomOf="@+id/imageView2"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/imageView2"
@@ -187,7 +193,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
-                android:text="네이버로 로그인"
+                android:text="@string/login6"
                 app:layout_constraintBottom_toBottomOf="@+id/imageView3"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/imageView3"
@@ -217,7 +223,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
-                android:text="Apple로 로그인"
+                android:text="@string/login7"
                 app:layout_constraintBottom_toBottomOf="@+id/imageView4"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/imageView4"
